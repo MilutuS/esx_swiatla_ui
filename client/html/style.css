@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Syncopate|Unica+One');
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100);
+
+body, html { 
+	overflow-y: hidden;
+	background-color: transparent !important;
+	display: none;
+}
+
+
+/* main.css */
+.right-color { 
+	position: absolute;
+	top: 0px;
+	left: 30px;
+	background: rgb(40, 40, 40);
+	height: 190px;
+	width: 500px;
+	border: 1px solid black;
+	border-radius: 10px 10px 10px 10px;
+	z-index:5;
+}
+.spacer{
+    height: 30%;
+}
+.spacer2{
+	display:absolute;
+    top: -40px;
+	left: -150px;
+	width: 900px;
+	height:400px;
+	overflow-y: auto;
+	word-break: break-word;
+}
+table{
+	table-layout:fixed;
+}
+.btn-group {
+	font-family: 'Roboto', sans-serif;
+	height: 390px;	
+	color: white;
+	width: 450px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -370px;
+	margin-left: -400px;
+	padding-bottom: 20px;
+	display: none;
+	z-index:1;
+	background-image: url(tablet.png);
+	background-repeat: no-repeat;
+	background-size: 450px;
+}
+.bckgrnd{
+	background: rgb(60, 60, 60);
+	position: absolute;
+	border-radius: 50px 5px 5px 5px;
+}
+
+#close {
+	display: inline-block;
+	float: right;
+	padding: 5px;
+	padding-right: 10px;
+	color: rgb(255, 0, 0);
+}
+.tablet{
+	z-index:2;
+	display: block;
+	position: absolute;
+	top:-50px;
+	left:-50px;
+}
+
+
+
+/* change look of buttons when hovering over them */
+button:hover {
+	background-color: #c7dbfc;
+}
+
+/* Hide the sub-menus */
+div.police_actions, div.inv, div.voice {
+	display: none;
+}
+
+.custom {
+    width: 150px !important;
+}
+
+.sidenav {
+    height: 415px;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    left: 17%;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+	margin-top: 17px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+

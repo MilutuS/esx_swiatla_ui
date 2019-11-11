@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		
+		<script>
+		$(function() {
+			/* open the UI for user */
+			window.addEventListener('message', function(event) {
+				if(event.data.type == "open"){
+					$('.btn-group').css('display', 'block')
+					$('body').css('display', 'block')
+					$('html').css('display', 'block')
+					$('#menujail').hide();
+					$('#menukartoteka').hide();
+					$('#menumandat').hide();
+				} else if (event.data.type == "close"){
+					$('.btn-group').css('display', 'none')
+					$('body').css('display', 'none')
+					$('html').css('display', 'none')
+					$('#mySidenav').css('width', '0')
+				}
+			});
+		});	
+		</script>
+	</head>
+
+    <body>	
+		<div class="btn-group">	
+			<!--<button class="btn-danger " id="exit_gui">Zamknij</button><br>-->
+			<button style="margin-left: 170px;margin-top: 29px;" class="btn-danger " id="save">Zapisz zmiany</button><br>
+			<div style="margin-left: 29px;float: left;margin-top: 6px;">
+			<button style="width: 180px;" class="btn-danger " id="change_color_0">Biały</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_1">Ciemny Niebieski</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_2">Jasny Niebieski</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_3">Turkusowy</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_4">Jasny Zielony</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_5">Ciemy Żółty</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_6">Jasny Pomarańczowy</button><br>
+			</div>
+			<div style="margin-left: 34px;margin-top: 6px;float: left;">
+			<button style="width: 180px;" class="btn-danger " id="change_color_7">Ciemy Pomarańczowy</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_8">Czerwony</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_9">Jasny Różowy</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_10">Ciemny Różowy</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_11">Jasny Fioletowy</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_12">Ciemny Filetowy</button><br>
+
+			<button style="width: 180px;" class="btn-danger " id="change_color_13">Xeon</button><br>
+
+			
+			</div>
+			
+	 
+		</div>
+    </body>
+	
+	<script type="text/javascript">
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "200px";
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+
+	$("#save").click(function(){
+		$('.btn-group').css('display', 'none')
+		$('#mySidenav').css('width', '0')
+		$.post('http://esx_swiatla_ui/save');
+	});
+
+	$("#exit_gui").click(function(){
+		$('.btn-group').css('display', 'none')
+		$('#mySidenav').css('width', '0')
+		$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+
+	$("#change_color_blue").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_blue');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+
+	$("#change_color_0").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_0');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_1").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_1');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_2").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_2');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_3").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_3');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_4").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_4');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_5").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_5');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_6").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_6');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_7").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_7');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_8").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_8');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_9").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_9');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_10").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_10');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_11").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_11');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_12").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_12');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	$("#change_color_13").click(function(){
+		$.post('http://esx_swiatla_ui/change_color_13');
+		//$('.btn-group').css('display', 'none')
+		//$.post('http://esx_swiatla_ui/NUIFocusOff', JSON.stringify({}));
+	});
+	</script>
+</html>
