@@ -26,6 +26,8 @@ SET time_zone = "+00:00";
 -- Struktura tabeli dla tabeli `owned_vehicles_headlights`
 --
 
+INSERT INTO `items` (`id`, `name`, `label`, `limit`, `rare`, `can_remove`) VALUES (NULL, 'zarowki', 'Kolorowe Żarówki', '1', '0', '1');
+
 CREATE TABLE `owned_vehicles_headlights` (
   `id` int(11) NOT NULL,
   `plate` text NOT NULL,
