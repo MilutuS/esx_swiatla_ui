@@ -22,7 +22,7 @@ end)
 ESX.RegisterServerCallback("esx_swiatla:zapisz_swiatla", function(source, cb, vehProps,color)
 	local src = source
 	local xPlayer = ESX.GetPlayerFromId(src)
-	local plate = vehProps["plate"]
+	local plate = string.gsub(vehProps["plate"], " ", "")
 	local color = color
 		MySQL.Async.fetchAll('SELECT * FROM owned_vehicles_headlights WHERE `plate` LIKE  "%' .. plate .. '%"', {}, function(result)
 			if result[1] ~= nil then
@@ -39,7 +39,7 @@ ESX.RegisterServerCallback("esx_swiatla:pobierz_swiatla", function(source, cb, v
 	local src = source
 	local xPlayer = ESX.GetPlayerFromId(src)
 	local color = color
-	plate = vehProps
+	plate = string.gsub(vehProps, " ", "")
 	if plate == nil then
 		plate = "AA0000"
 	end
